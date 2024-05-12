@@ -1,18 +1,18 @@
-import React, { Component } from 'react'
+import React from 'react'
 import flash from '../../assets/flash.png'
 import { Link } from 'react-router-dom'
 
 
 
-export class Navbar extends Component {
+const Navbar=(props)=>{
 
   
-  handleChange = (e) => {
+  const handleChange = (e) => {
     var lowercase= e.target.value;
-    this.props.settingState(lowercase);
+    props.settingState(lowercase);
   }
   
-  render() {
+
     
     return (
       <header className="text-gray-600 body-font bg-blue-300">
@@ -39,7 +39,7 @@ export class Navbar extends Component {
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                 </svg>
               </div>
-              <input type="search" id="default-search" className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-white dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500 outline-none" placeholder="Search Latest News" onChange={this.handleChange} required />
+              <input type="search" id="default-search" className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-white dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500 outline-none" placeholder="Search Latest News" onChange={handleChange} required />
               
             </div>
           </form>
@@ -47,7 +47,7 @@ export class Navbar extends Component {
         </div>
       </header>
     )
-  }
+  
 }
 
 export default Navbar
