@@ -88,8 +88,8 @@ const News = (props) => {
     <section className="text-gray-600 body-font ">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col text-center w-full mb-20">
-          <h1 className="text-2xl font-medium title-font mb-4 text-gray-900 tracking-widest">TOP {props.category.toUpperCase()} HEADLINES</h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them.</p>
+          <h1 className="text-2xl font-medium title-font mb-2 text-gray-900 tracking-widest mt-10">TOP {props.category.toUpperCase()} HEADLINES</h1>
+          
         </div>
         { loading && <Spinner/>}
 
@@ -134,13 +134,13 @@ News.defaultProps = {
   pageSize: 8,
   category: 'general',
 
-}
+};
 
 News.propTypes = {
   country: PropTypes.string,
   pageSize: PropTypes.number,
   category: PropTypes.string,
-}
+};
 
 
 
